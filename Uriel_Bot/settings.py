@@ -26,7 +26,7 @@ SECRET_KEY = 'jdy$n-4=_pa%d=yv0y0pz3(^b2trmxridr15-m(9c1rvr0-fs7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['uriel-bot2.herokuapp.com', '0.0.0.0']
+ALLOWED_HOSTS = ['uriel-bot3.herokuapp.com', '0.0.0.0']
 
 
 # Application definition
