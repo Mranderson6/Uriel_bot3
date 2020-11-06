@@ -26,7 +26,7 @@ SECRET_KEY = 'jdy$n-4=_pa%d=yv0y0pz3(^b2trmxridr15-m(9c1rvr0-fs7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['uriel-bot2.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['uriel-bot2.herokuapp.com', '0.0.0.0']
 
 
 # Application definition
@@ -122,6 +122,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL = '/Media/'
 
