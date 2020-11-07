@@ -5695,6 +5695,9 @@ Footer Area CSS
 .copyright-area {
   background-color: #0d1d3b;
   margin-top: 70px;
+   margin-left: auto;
+  margin-right: auto;
+  width:auto;
   padding-top: 20px;
   padding-bottom: 20px;
 }

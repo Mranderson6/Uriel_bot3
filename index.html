@@ -1,7 +1,6 @@
 <html lang="en">
 <head>
     {% load static %}
-    <!-- rgb(226, 45, 45)-->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -23,7 +22,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- {% block titre %}   <title>Uriel Bot - By AKAMASOFT</title>  {% endblock %}
+  {% block titre %}   <title>Uriel Bot - By AKAMASOFT</title> {% endblock %}
 
     <link rel="stylesheet" href="{%static 'assets/css/bootstrap.min.css'%}">
     <!-- Animate Min CSS -->
@@ -83,9 +82,9 @@
                             <div class="container">
                                 <div class="evolta-responsive-menu">
                                     <div>
-                                        <a href="{% url 'index' %}">
+                                        <a href="#">
 
-                                          <strong>Uriel Bot</strong>
+                                           Uriel Bot
                                         </a>
                                     </div>
                                 </div>
@@ -109,7 +108,9 @@
                                             <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
 
                                         </ul>
-
+                                         <div class="others-options">
+                                             <a href="{%url 'adhesion' %}" class="btn btn-info">Démarrer</a>
+                                        </div>
 
                                     </div>
                                 </nav>
@@ -120,19 +121,18 @@
 
                 </header>
                 <!-- End Header Area -->
-
+ {% block baniere %}
                 <!-- Start Main Banner Area -->
-    {% block baniere %}
         <div class="main-banner">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-7 col-md-12">
                         <div class="main-banner-content">
-                            <h1>Social Marketing</h1>
+                            <h1>IA & Social Marketing</h1>
                             <p>Utilisez Facebook et Messenger pour automatiser et optimiser la gestion du marketing complet de votre entreprise. </p>
 
                             <div class="btn-box">
-                                <a href="{% url 'about' %}" class="btn btn-light">En savoir plus</a>
+                                <a href="#" class="btn btn-light">En savoir plus</a>
                             </div>
                         </div>
                     </div>
@@ -156,10 +156,10 @@
                 <div class="line"></div>
             </div>
         </div>
+    {% endblock %}
         <!-- End Main Banner Area -->
-        {% endblock %}
+{% block central %}
         <!-- Start Featured Services Area -->
-      {% block central %}
         <section class="featured-services-area ptb-110">
             <div class="container">
                 <div class="row">
@@ -679,7 +679,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2>F.A.Q & RESSOURCES</h2>
-                    <p>Depuis fin 2019, toutes les entreprises s'ariment au néo-marketing digital qui consiste en une file d'activités marketing précises</p>
+                    <p>Depuis fin 2019, toutes les entreprises adhère au marketing digital qui consiste en une file d'activités marketing précises</p>
                 </div>
             </div>
 
@@ -721,87 +721,137 @@
             </div>
         </section>
 
+        <!-- Nos services area -->
+       <section class="resources-area ptb-110">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="color: #00b2ff;">NOS SERVICES</h2>
+                    <p>Les aspects du marketing que touche Uriel Bot</p>
+                </div>
+            </div>
+
+            <div class="resources-slides owl-carousel owl-theme">
+
+                            <div class="single-resources-box">
+                                 <div class="resources-image">
+                        <a href="ressources/6.html">
+
+
+                                                    </a>
+                    </div>
+                   <div class="resources-content">
+                        <h3><a href="ressources/6.html">Auto-Répondeur Facebook
+                        </a></h3>
+                        <p><div>Nous acceptons&nbsp; Paypal, Stripe, la plupart des principales cartes de crédit, dont Visa, Mastercard, American Express</div></p>
+                        <a href="ressources/6.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+                            <div class="single-resources-box">
+                  <div class="resources-content">
+                        <h3><a href="ressources/7.html">Chatbot Messenger
+                        </a></h3>
+                        <p><div>Nous nous efforçons de créer la meilleure plateforme de marketing Messenger au monde. Si vous n'êtes pas satisfait par</div></p>
+                        <a href="ressources/7.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+                            <div class="single-resources-box">
+                   <div class="resources-content">
+                        <h3><a href="ressources/8.html">Marketing SMS
+                        </a></h3>
+                        <p><div>De nombreux chatbots simulent une conversation humaine via une interface</div></p>
+                        <a href="ressources/8.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+                            <div class="single-resources-box">
+                 <div class="resources-content">
+                        <h3><a href="ressources/10.html">Boutique Messenger
+                        </a></h3>
+                        <p><div>Vous n'avez besoin d'aucunes connaissances particulières pour utiliser Uriel Bot, il est assez simple d'utilisation</div></p>
+                        <a href="ressources/10.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+                            <div class="single-resources-box">
+                 <div class="resources-content">
+                        <h3><a href="ressources/10.html">Outils de recherche
+                        </a></h3>
+                        <p><div>Vous n'avez besoin d'aucunes connaissances particulières pour utiliser Uriel Bot, il est assez simple d'utilisation</div></p>
+                        <a href="ressources/10.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+                            <div class="single-resources-box">
+                 <div class="resources-content">
+                        <h3><a href="ressources/10.html">Campagne Messenger
+                        </a></h3>
+                        <p><div>Vous n'avez besoin d'aucunes connaissances particulières pour utiliser Uriel Bot, il est assez simple d'utilisation</div></p>
+                        <a href="ressources/10.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+                            <div class="single-resources-box">
+                 <div class="resources-content">
+                        <h3><a href="ressources/10.html">Auto-Répondeur email
+                        </a></h3>
+                        <p><div>Vous n'avez besoin d'aucunes connaissances particulières pour utiliser Uriel Bot, il est assez simple d'utilisation</div></p>
+                        <a href="ressources/10.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+                            <div class="single-resources-box">
+                 <div class="resources-content">
+                        <h3><a href="ressources/10.html">Formulaire Messenger
+                        </a></h3>
+                        <p><div>Vous n'avez besoin d'aucunes connaissances particulières pour utiliser Uriel Bot, il est assez simple d'utilisation</div></p>
+                        <a href="ressources/10.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+         <!-- newsletter -->
 
 {% endblock %}
      <footer class="footer-area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="single-footer-widget">
-                                    <div class="logo">
-                                        <a href="#"></a>
-                                        <p>Créer un compte et obtenez un accès sur le logiciel marketing Tout-en-Un le puis puissant du mode </p>
-                                    </div>
+                 <section class="free-trial-area">
+				<div class="container">
+					<div class="free-trial-inner-area">
+						<div class="row align-items-center">
+							<div class="col-lg-6 col-md-12">
+								<div class="content">
+									<h3>Essayer Uriel Bot </h3>
+									<p>Abonnez-vous au service d' Uriel Bot.</p>
+								</div>
+							</div>
 
-                                    <ul class="social">
-                                        <li><a href="#" target="_blank"><i class="flaticon-facebook-letter-logo"></i></a></li>
-                                       <li><a href="#" target="_blank"><i class="flaticon-twitter-black-shape"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="flaticon-instagram-logo"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="flaticon-youtube"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="single-footer-widget">
-                                    <h3>Services </h3>
-
-                                    <ul class="footer-services-list">
-                                        <li>Auto-Répondeur Facebook</li>
-                                        <li>Chatbot Messenger</li>
-                                        <li>Marketing SMS</li>
-                                        <li>Boutique Messenger</li>
-                                        <li>Outils de recherche</li>
-                                        <li>Campagne Messenger</li>
-                                        <li>Auto-Répondeur email</li>
-                                        <li>Formulaire Messenger</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="single-footer-widget">
-                                    <h3>Liens rapides</h3>
-
-                                    <ul class="quick-links-list">
-                                        <li><a href="{% url 'about' %}">A propos</a></li>
-                                        <li><a href="{% url 'contact' %}">Contact</a></li>
-                                      </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="single-footer-widget">
-                                    <h3>Contacts</h3>
-
-                                    <ul class="footer-contact-list">
-                                        <li><span>Adresse principale:</span> Yaounde, Cameroun</li>
-                                        <li><p><span>Telephone: </span>+237 694783092 </p></li>
-                                        <li><span>Email:</span> <a href="mailto: Akamabil@gmail.com "> Akamabil@gmail.com </a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="copyright-area">
+							<div class="col-lg-6 col-md-12">
+								<div class="free-trial-form">
+									<form>
+										<input type="email" class="input-newsletter"
+										 placeholder="Entrer votre adresse email" name="EMAIL">
+                                        <button type="button" id="newsletterBTNID"
+                                        >
+                                            <span class="d-none d-xs-none d-sm-none d-lg-block">Obtenir un accès</span>
+                                            <span class="d-block d-lg-none d-xs-block  ">
+                                                <i class="fa fa-paper-plane"></i>
+                                            </span>
+                                        </button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+                 <div class="copyright-area">
                         <div class="container">
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <p>Copyright 2020 <a href="#">Akamasoft</a>. Tous droits reservés.</p>
+                                    <p>Copyright 2020  <a href="https://akamasoft.business.site/">Akamasoft</a></li>. Tous droits reservés.</p>
                                 </div>
 
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <ul>
-
-                                        <li><a href="#">Politique de confidentialité</a></li>
-                                        <li><a href="#">Terms & Conditions</a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="circle-map"><img src="{%static 'assets/img/circle-map.png'%}" alt="image"></div>
+
                 </footer>
             <!-- End Footer Area -->
             <div class="go-top"><i class="fas fa-arrow-up"></i><i class="fas fa-arrow-up"></i></div>
@@ -838,4 +888,3 @@
             <script src="{%static 'assets/js/main.js'%}"></script>
 </body>
 </html>
-

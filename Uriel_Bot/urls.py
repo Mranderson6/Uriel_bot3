@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^tarif/', include('Tarif.urls')),
     url(r'^contact/', include('Contact.urls')),
     url(r'^about/', include('A_propos.urls')),
+    url(r'^inscription/', include('inscription.urls')),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

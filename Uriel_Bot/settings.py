@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Tarif',
     'Contact',
     'A_propos',
+    'inscription',
 
 ]
 
