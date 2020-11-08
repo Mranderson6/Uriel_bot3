@@ -6,3 +6,6 @@ def adhesion (request):
 
 def adhesion_login(request):
    return render(request, 'adhesion/home/sign_up.html')
+
+def oublie_pwd(request):
+   return render(request, 'adhesion/home/forgot_password.html')
