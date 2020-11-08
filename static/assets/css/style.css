@@ -2360,7 +2360,7 @@ services Area CSS
 }
 .box:after
 {
-    content: url(static/assets/images/wha.png);
+    content: '';
     position: absolute;
     bottom: 10%;
     right: 10%;
