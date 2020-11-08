@@ -2218,9 +2218,9 @@ Resources Area CSS
 }
 
 .single-resources-box:hover {
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 0 40px 3px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 40px 3px rgba(0, 0, 0, 0.05);
+  background-color:  #ff006a;
+  -webkit-box-shadow: 0 0 40px 3px rgba(0, 0, 0, 1);
+          box-shadow: 0 0 40px 3px rgba(0, 0, 0, 1);
   -webkit-transform: translateY(-8px);
           transform: translateY(-8px);
 }
