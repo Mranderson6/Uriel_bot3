@@ -1,0 +1,215 @@
+$(document).ready(function(){
+    
+    let searchParams = new URLSearchParams(window.location.search);
+    var AFF_ID = searchParams.get('aff_id');    
+    if(typeof AFF_ID != "undefined" && AFF_ID !== null){
+        localStorage.setItem("affiliate_id", AFF_ID);
+    }else{
+        console.log("Aff ID from url query not found!");
+    }
+    
+    if( localStorage.getItem("affiliate_id") !== null ){
+        _AFF_ID = localStorage.getItem("affiliate_id");
+    }else{
+        _AFF_ID = 1;
+        console.log("Aff ID from local storage not found!");
+    }
+    
+    register_affiliate_action(_AFF_ID);
+    
+});
+
+function register_affiliate_action(_AFF_ID){
+    if(typeof _CurrentSiteUrl != "undefined" && _CurrentSiteUrl != ""){
+        var domain = _CurrentSiteUrl + "affiliate_master/register_affiliate_action";
+        $.ajax({
+           type: "POST",
+           url: domain,
+           data: {
+        	   id : _AFF_ID,
+           },
+           success:function( result ) {
+               var _result = JSON.parse(result);
+               console.log(_result);
+               localStorage.removeItem("affiliate_id");
+           },
+           error: function(errorThrown){
+        
+           }
+        });
+    }
+
+}if( typeof GlobalLang == "undefined" ){
+    var GlobalLang = {};
+}
+
+GlobalLang["Affiliates"] = "Affiliates";
+GlobalLang["Are you sure you want to cash out"] = "Are you sure you want to cash out";
+GlobalLang["After cashout submission, it will be reviewed by the admin. System will notify you via email once cashout is complete."] = "After cashout submission, it will be reviewed by the admin. System will notify you via email once cashout is complete.";
+GlobalLang["How do you want to get paid?"] = "How do you want to get paid?";
+GlobalLang["Enter details where we can send your payment."] = "Enter details where we can send your payment.";
+GlobalLang["(If you chose manual, provide details e.g bank details, and the likes. If you chose paypal, provide your paypal email address. Please complete your details so we can avoid problems when doing your cashout.)"] = "(If you chose manual, provide details e.g bank details, and the likes. If you chose paypal, provide your paypal email address. Please complete your details so we can avoid problems when doing your cashout.)";
+GlobalLang["Minimum Cashout Amount Not Met"] = "Minimum Cashout Amount Not Met";
+GlobalLang["Sorry, you did not met the minimum cashout amount. You can withdraw once you earn more than:"] = "Sorry, you did not met the minimum cashout amount. You can withdraw once you earn more than:";
+GlobalLang["Pending"] = "Pending";
+GlobalLang["Approved"] = "Approved";
+GlobalLang["Disapproved"] = "Disapproved";
+GlobalLang["Date Withdrawn"] = "Date Withdrawn";
+GlobalLang["Status"] = "Status";
+GlobalLang["Payment Details"] = "Payment Details";
+GlobalLang["Payment Method"] = "Payment Method";
+GlobalLang["Referral Count"] = "Referral Count";
+GlobalLang["Amount"] = "Amount";
+GlobalLang["Transaction ID"] = "Transaction ID";
+GlobalLang["Index"] = "Index";
+GlobalLang["Referral ID"] = "Referral ID";
+GlobalLang["Name"] = "Name";
+GlobalLang["Email"] = "Email";
+GlobalLang["Source"] = "Source";
+GlobalLang["Entry Date"] = "Entry Date";
+GlobalLang["Log"] = "Log";
+GlobalLang["Date"] = "Date";
+GlobalLang["Failed To Get User Referrals!"] = "Failed To Get User Referrals!";
+GlobalLang["Please try again..."] = "Please try again...";
+GlobalLang["Failed To Get User Referrals!"] = "Failed To Get User Referrals!";
+GlobalLang["Failed To Get User Logs!"] = "Failed To Get User Logs!";
+GlobalLang["Are you sure you want to delete this post?"] = "Are you sure you want to delete this post?";
+GlobalLang["Upload Your Media"] = "Upload Your Media";
+GlobalLang["(Optional)"] = "(Optional)";
+GlobalLang["Configure Resource"] = "Configure Resource";
+GlobalLang["Text Count"] = "Text Count";
+GlobalLang["Error: Execeeded Character Limit."] = "Error: Execeeded Character Limit.";
+GlobalLang["Error: Values are missing"] = "Error: Values are missing";
+GlobalLang["Please wait..."] = "Please wait...";
+GlobalLang["Publishing...."] = "Publishing....";
+GlobalLang["Saving..."] = "Saving...";
+GlobalLang["Creating..."] = "Creating...";
+GlobalLang["Your media is uploading... please wait..."] = "Your media is uploading... please wait...";
+GlobalLang["Oops..."] = "Oops...";
+GlobalLang["Something went wrong!"] = "Something went wrong!";
+GlobalLang["Post Successfully Created!"] = "Post Successfully Created!";
+GlobalLang["Post Successfully Created!"] = "Post Successfully Created!";
+GlobalLang["Are you sure you want to delete this post?"] = "Are you sure you want to delete this post?";
+GlobalLang["Successfully saved!"] = "Successfully saved!";
+GlobalLang["Failed to save..."] = "Failed to save...";
+GlobalLang["Please try again..."] = "Please try again...";
+GlobalLang["Something went wrong..."] = "Something went wrong...";
+GlobalLang["Preparing..."] = "Preparing...";
+GlobalLang["Select Pages To Publish Post"] = "Select Pages To Publish Post";
+GlobalLang["Select Groups To Publish Post"] = "Select Groups To Publish Post";
+GlobalLang["Select Users To Publish Post"] = "Select Users To Publish Post";
+GlobalLang["Select Pages"] = "Select Pages";
+GlobalLang["Select Users"] = "Select Users";
+GlobalLang["Select Groups"] = "Select Groups";
+GlobalLang["Publish Now"] = "Publish Now";
+GlobalLang["Where To Publish Post?"] = "Where To Publish Post?";
+GlobalLang["Failed To Get Post Objects!"] = "Failed To Get Post Objects!";
+GlobalLang["Successfully published post!"] = "Successfully published post!";
+GlobalLang["Failed to publish post!"] = "Failed to publish post!";
+GlobalLang["Failed To Publish Post Objects!"] = "Failed To Publish Post Objects!";
+GlobalLang["is a required field. It can't be empty."] = "is a required field. It can`t be empty.";
+GlobalLang["Failed Save Admin Settings!"] = "Failed Save Admin Settings!";
+GlobalLang["Successfully saved admin settings!"] = "Successfully saved admin settings!";
+GlobalLang["Failed to save admin settings!"] = "Failed to save admin settings!";
+GlobalLang["Failed To Get Admin Settings!"] = "Failed To Get Admin Settings!";
+GlobalLang["Failed To Get Report Data!"] = "Failed To Get Report Data!";
+GlobalLang["Registering...."] = "Registering....";
+GlobalLang["You Have Successfully Registered On The Affiliate Program!"] = "You Have Successfully Registered On The Affiliate Program!";
+GlobalLang["Failed to register...!"] = "Failed to register...!";
+GlobalLang["Failed To Register Member!"] = "Failed To Register Member!";
+GlobalLang["Success!"] = "Success!";
+GlobalLang["Your withdrawal request has been successfully submitted. Please wait for our email for the amout credit update."] = "Your withdrawal request has been successfully submitted. Please wait for our email for the amout credit update.";
+GlobalLang["Failed Submit Withdrawal Request"] = "Failed Submit Withdrawal Request";
+GlobalLang["Transaction status changes has been saved."] = "Transaction status changes has been saved.";
+GlobalLang["Failed to save transaction status changes"] = "Failed to save transaction status changes";
+GlobalLang["Resource has been delete."] = "Resource has been delete.";
+GlobalLang["Failed to delete resource."] = "Failed to delete resource.";
+GlobalLang["Download this media"] = "Download this media";
+GlobalLang["Publish this post on your Social Media Channels"] = "Publish this post on your Social Media Channels";
+GlobalLang["Delete this post..."] = "Delete this post...";
+GlobalLang["Publish this post on your Social Media Channels"] = "Publish this post on your Social Media Channels";
+GlobalLang["Delete this post..."] = "Delete this post...";
+GlobalLang["Download this media"] = "Download this media";
+GlobalLang["Publish this post on your Social Media Channels"] = "Publish this post on your Social Media Channels";
+GlobalLang["Delete this post..."] = "Delete this post...";
+GlobalLang["Publish this post on your Social Media Channels"] = "Publish this post on your Social Media Channels";
+GlobalLang["Delete this post..."] = "Delete this post...";
+GlobalLang["Hi Admin! There's A New Version Of The Affiliate Master Addon."] = "Hi Admin! There`s A New Version Of The Affiliate Master Addon.";
+GlobalLang["Simply click UPDATE NOW, It's Safe and Quick!"] = "Simply click UPDATE NOW, It`s Safe and Quick!";
+GlobalLang["UPDATE NOW!"] = "UPDATE NOW!";
+GlobalLang["Upate On Progress..."] = "Upate On Progress...";
+GlobalLang["Please click 'OK' to refresh!"] = "Please click `OK` to refresh!";
+GlobalLang["Update Failed!"] = "Update Failed!";
+GlobalLang["Affiliate Reports"] = "Affiliate Reports";
+GlobalLang["Reports"] = "Reports";
+GlobalLang["Your Transactions"] = "Your Transactions";
+GlobalLang["Transactions"] = "Transactions";
+GlobalLang["Affilaite Link, Ad copy, videos, images, banners, resources."] = "Affilaite Link, Ad copy, videos, images, banners, resources.";
+GlobalLang["Resources"] = "Resources";
+GlobalLang["Referrals"] = "Referrals";
+GlobalLang["Your Referral List"] = "Your Referral List";
+GlobalLang["Logs"] = "Logs";
+GlobalLang["Your Logs"] = "Your Logs";
+GlobalLang["Read the Affiliate Information, Terms and Condition, Rules and Policy here."] = "Read the Affiliate Information, Terms and Condition, Rules and Policy here.";
+GlobalLang["Terms and Policy"] = "Terms and Policy";
+GlobalLang["Change the Affiliate Plugin Settings Here"] = "Change the Affiliate Plugin Settings Here";
+GlobalLang["Admin Settings"] = "Admin Settings";
+GlobalLang["30-Day Chart | Affiliate Record"] = "30-Day Chart | Affiliate Record";
+GlobalLang["Total Basic Referrals"] = "Total Basic Referrals";
+GlobalLang["Total Pro Referrals"] = "Total Pro Referrals";
+GlobalLang["Total Earnings"] = "Total Earnings";
+GlobalLang["Your Withdrawable Earnings"] = "Your Withdrawable Earnings";
+GlobalLang["You can cash-out your earning here"] = "You can cash-out your earning here";
+GlobalLang["NOW!"] = "NOW!";
+GlobalLang["Save the changes you made on the transactions"] = "Save the changes you made on the transactions";
+GlobalLang["SAVE"] = "SAVE";
+GlobalLang["Add a resource material here"] = "Add a resource material here";
+GlobalLang["Filter Posts View"] = "Filter Posts View";
+GlobalLang["Texts"] = "Texts";
+GlobalLang["Links"] = "Links";
+GlobalLang["Images"] = "Images";
+GlobalLang["Videos"] = "Videos";
+GlobalLang["All Posts"] = "All Posts";
+GlobalLang["Save Your Resources"] = "Save Your Resources";
+GlobalLang["To join the Affiliate Program, you must first agree to the terms and policy. Read below and click 'YES! I AGREE TO THE TERMS AND POLICY OF THE AFFILIATE PROGRAM' button below."] = "To join the Affiliate Program, you must first agree to the terms and policy. Read below and click `YES! I AGREE TO THE TERMS AND POLICY OF THE AFFILIATE PROGRAM` button below.";
+GlobalLang["Affiliate Policy"] = "Affiliate Policy";
+GlobalLang["Agree to the terms and conditions to Join the Affiliate Program."] = "Agree to the terms and conditions to Join the Affiliate Program.";
+GlobalLang["YES! I AGREE TO THE TERMS AND POLICY OF THE AFFILIATE PROGRAM"] = "YES! I AGREE TO THE TERMS AND POLICY OF THE AFFILIATE PROGRAM";
+GlobalLang["Affiliate Reward Settings"] = "Affiliate Reward Settings";
+GlobalLang["Package"] = "Package";
+GlobalLang["Save Your Admin Settings"] = "Save Your Admin Settings";
+GlobalLang["Affiliate Policy Composer"] = "Affiliate Policy Composer";
+GlobalLang["Get your IP Quality Score at"] = "Get your IP Quality Score at";
+GlobalLang["Once you set an IP Quality Score API Key, then the system will check if the user uses Proxy IP (which can be used to cheat the referral IP address) and will also check if the user's IP address has a scam/fraud history"] = "Once you set an IP Quality Score API Key, then the system will check if the user uses Proxy IP (which can be used to cheat the referral IP address) and will also check if the user`s IP address has a scam/fraud history";
+GlobalLang["IP Quality Score API Key"] = "IP Quality Score API Key";
+GlobalLang["Minimum Payout Settings"] = "Minimum Payout Settings";
+GlobalLang["Currency Settings"] = "Currency Settings";
+GlobalLang["Increase Amount"] = "Increase Amount";
+GlobalLang["Package"] = "Package";
+GlobalLang["Reward Increase Per User Level"] = "Reward Increase Per User Level";
+GlobalLang["Reward Amount"] = "Reward Amount";
+GlobalLang["Affiliate Program"] = "Affiliate Program";
+GlobalLang["UPGRADE NOW"] = "UPGRADE NOW";
+GlobalLang["You do not have permission to access this content. Upgrade Your Account To Do More."] = "You do not have permission to access this content. Upgrade Your Account To Do More.";
+GlobalLang["Access Denied"] = "Access denied";
+GlobalLang["Unverified Affiliate Master Addon"] = "Unverified Affiliate Master Addon";
+GlobalLang["Your Affiliate Master Addon Installed Is Not Purchase Verified. Your Access Is Denied."] = "Your Affiliate Master Addon Installed Is Not Purchase Verified. Your Access Is Denied.";
+GlobalLang["You Have Been Banned From The Affiliate Program"] = "You Have Been Banned From The Affiliate Program";
+GlobalLang["Admin has banned you from the affiliate program, please open a support ticket if you want to appeal."] = "Admin has banned you from the affiliate program, please open a support ticket if you want to appeal.";
+GlobalLang["Submit An Appeal"] = "Submit An Appeal";
+GlobalLang["User ID"] = "User id";
+GlobalLang["Status"] = "Status";
+GlobalLang["Actions"] = "Actions";
+GlobalLang["Active"] = "Active";
+GlobalLang["Banned"] = "Banned";
+GlobalLang["Failed To Get Affiliate Members"] = "Failed To Get Affiliate Members";
+GlobalLang["Your Affiliate Members"] = "Your Affiliate Members";
+GlobalLang["Ban"] = "Ban";
+GlobalLang["Activate"] = "Activate";
+GlobalLang["Reason"] = "Reason";
+GlobalLang["Enter Reason Why This Member Is Banned"] = "Enter Reason Why This Member Is Banned";
+GlobalLang["This reason will be used to notify the affiliate member why thier account was banned."] = "This reason will be used to notify the affiliate member why thier account was banned.";
+GlobalLang["Please enter a reason. This field cannot be blank."] = "Please enter a reason. This field cannot be blank.";
+GlobalLang["Save Member Status Changes"] = "Save Member Status Changes";
+GlobalLang["Affiliate Member Status Has Been Changed!"] = "Affiliate Member Status Has Been Changed!";
+GlobalLang["Success!"] = "Success!";

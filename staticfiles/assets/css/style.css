@@ -110,7 +110,7 @@ p:last-child {
 }
 
 .ptb-110 {
-  padding-top: 110px;
+  padding-top:56px;
   padding-bottom: 110px;
 }
 
@@ -2172,7 +2172,7 @@ Resources Area CSS
 .resources-area {
   position: relative;
   z-index: 1;
-  padding-bottom: 80px;
+  padding-bottom: 5px;
 }
 
 .resources-area .pagination-area {
@@ -2225,6 +2225,8 @@ Resources Area CSS
           transform: translateY(-8px);
 }
 
+
+
 .single-resources-box:hover .resources-image a img {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
@@ -2249,6 +2251,123 @@ Resources Area CSS
 
 .resources-slides.owl-theme .owl-dots .owl-dot.active span, .resources-slides.owl-theme .owl-dots .owl-dot:hover span {
   background-color: #00b2ff;
+}
+
+/*================================================
+services Area CSS
+=================================================*/
+.quote
+{
+    width:1800px;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+}
+.box
+{
+    position: relative;
+    width:360px;
+    height: 400px;
+    background:  #fff;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0,0,0,.2)
+}
+.box:hover
+{
+    box-shadow: -20px 50px 100px rgba(0,0,0,.5)
+}
+.box p
+{
+    margin: 0;
+    padding: 0;
+    font-size:18px;
+}
+.box:hover p
+{
+ color: #fff;
+}
+.box h2
+{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    margin: 0;
+    padding: 0;
+    font-size:20px;
+    text-transform: uppercase;
+}
+.quote .bg
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+
+}
+.box.box1:hover ~ .bg,
+.box.box1:hover
+{
+   opacity : 1;
+   background: linear-gradient(#25D366, #075E54);
+}
+
+.box.box2:hover ~ .bg,
+.box.box2:hover
+{
+   opacity : 1;
+   background: linear-gradient(#4267B2, #006AFF);
+}
+
+.box.box3:hover ~ .bg,
+.box.box3:hover
+{
+   opacity : 1;
+   background: linear-gradient(#F56040, #C13584);
+}
+.box.box4:hover ~ .bg,
+.box.box4:hover
+{
+   opacity : 1;
+   background: linear-gradient(#00B2FF, #1DA1F2);
+}
+.box.box5:hover ~ .bg,
+.box.box5:hover
+{
+   opacity : 1;
+   background: linear-gradient(#5B51D8, #405DE6);
+}
+.box:before
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.2);
+    pointer-events: none;
+}
+.box:after
+{
+    content: url(static/assets/images/wha.png);
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    opacity: .1;
+    background: rgba(255,255,255,.2);
+    pointer-events: none;
+    filter: invert(1);
 }
 
 /*================================================
@@ -5695,6 +5814,9 @@ Footer Area CSS
 .copyright-area {
   background-color: #0d1d3b;
   margin-top: 70px;
+   margin-left: auto;
+  margin-right: auto;
+  width:auto;
   padding-top: 20px;
   padding-bottom: 20px;
 }
