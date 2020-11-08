@@ -110,7 +110,7 @@ p:last-child {
 }
 
 .ptb-110 {
-  padding-top: 110px;
+  padding-top:56px;
   padding-bottom: 110px;
 }
 
@@ -2172,7 +2172,7 @@ Resources Area CSS
 .resources-area {
   position: relative;
   z-index: 1;
-  padding-bottom: 80px;
+  padding-bottom: 5px;
 }
 
 .resources-area .pagination-area {
