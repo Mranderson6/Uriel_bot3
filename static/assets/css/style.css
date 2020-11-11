@@ -2343,6 +2343,19 @@ services Area CSS
     padding: 30px;
     box-shadow: -10px 25px 50px rgba(0,0,0,.2)
 }
+.box.box7
+{
+    position: relative;
+    width:360px;
+    height: 400px;
+   background: linear-gradient(#0088cc, #404041);
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0,0,0,.2)
+}
 .box:hover
 {
     box-shadow: -20px 50px 100px rgba(0,0,0,.5)
@@ -2421,6 +2434,12 @@ services Area CSS
 }
 .box.box6:hover ~ .bg,
 .box.box6:hover
+{
+   opacity : 1;
+   background:  #fff;
+}
+.box.box7:hover ~ .bg,
+.box.box7:hover
 {
    opacity : 1;
    background:  #fff;
