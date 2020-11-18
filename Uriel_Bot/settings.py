@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -26,8 +25,7 @@ SECRET_KEY = 'jdy$n-4=_pa%d=yv0y0pz3(^b2trmxridr15-m(9c1rvr0-fs7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['uriel-bot3.herokuapp.com','localhost' , '0.0.0.0']
-
+ALLOWED_HOSTS = ['uriel-bot3.herokuapp.com', 'localhost', '0.0.0.0']
 
 # Application definition
 
@@ -61,7 +59,7 @@ ROOT_URLCONF = 'Uriel_Bot.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR),'static'],
+        'DIRS': [os.path.join(BASE_DIR), 'static'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,7 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Uriel_Bot.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -86,7 +83,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -106,7 +102,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -120,17 +115,31 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL = '/Media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'Media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'static'),
+    os.path.join(BASE_DIR, 'static'),
 )
+
+# EMAIL CONFIGURATION
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+
+# EMAIL_HOST_PASSWORD = environ.get('EMAIL_HOST_PASSWORD', '')
+
+EMAIL_HOST_PASSWORD = 'ermite6chemin'
+EMAIL_HOST_USER = 'bigshow.stephane@gmail.com'
+EMAIL_PORT = 587
+# EMAIL_SUBJECT_PREFIX = '[%s] ' % SITE_NAME
+EMAIL_USE_TLS = True
+SERVER_EMAIL = EMAIL_HOST_USER
+# END EMAIL CONFIGURATION
