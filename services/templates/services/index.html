@@ -1,0 +1,856 @@
+{% load static %}
+<html lang="en">
+<head>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag(js, new Date());
+
+        gtag(config, UA-177432713-1);
+      </script>
+
+      <script>
+          (function(h,o,t,j,a,r){
+              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:1979623,hjsv:6};
+              a=o.getElementsByTagName(head)[0];
+              r=o.createElement(script);r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+          })(window,document,https://static.hotjar.com/c/hotjar-,.js?sv=);
+      </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block titre %}   <title>Uriel Bot - By AKAMASOFT</title> {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css'%}">
+    <!-- Font Awesome Min CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css'%}">
+    <!-- Box Icons Min CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/boxicons.min.css'%}">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css'%}">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="{%static 'assets/css/owl.carousel.min.css'%}">
+    <!-- Magnific Popup Min CSS -->
+    <link rel="stylesheet" href="{%static 'assets/css/magnific-popup.min.css'%}">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="{%static 'assets/css/nice-select.css'%}">
+    <!-- Mean Menu CSS -->
+    <link rel="stylesheet" href="{%static 'assets/css/meanmenu.css'%}">
+    <!-- Progress Circle Min CSS -->
+    <link rel="stylesheet" href="{%static 'assets/css/progresscircle.min.css'%}">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{%static 'assets/css/style.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/sweet-alert.css'%}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{%static 'assets/css/responsive.css'%}">
+
+
+
+
+</head>
+<body>
+    <!-- Start Header Area -->
+                <header class="header-area">
+
+                    <!-- Start Top Header -->
+                    <div class="top-header">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-6">
+                                    <p><span>Address: </span>+237 694783092 </p>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <ul>
+
+                                        <li><span>Email:</span> <a href="mailto: Akamabil@gmail.com "> Akamabil@gmail.com </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Top Header -->
+
+                    <!-- Start Navbar Area -->
+                    <div class="navbar-area">
+                        <div class="evolta-responsive-nav">
+                            <div class="container">
+                                <div class="evolta-responsive-menu">
+                                    <div>
+                                        <a href="{% url 'index' %}">Uriel Bot</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="evolta-nav">
+                            <div class="container-fluid">
+                                <nav class="navbar navbar-expand-md navbar-light">
+                                    <a class="navbar-brand" href="{% url 'index' %}">
+                                        <h3 style="color: white;">Uriel Bot</h3>
+
+                                                                            </a>
+
+                                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item"><a href="{% url 'index' %}" class="nav-link"> Accueil </a>
+                                            </li>
+                                            <li class="nav-item"><a href="{% url 'tarif' %}" class="nav-link">Tarif</a></li>
+                                            <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">A propos</a></li>
+                                            <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+
+                                        </ul>
+                                         <div class="others-options">
+                                             <a href="{%url 'adhesion' %}" class="btn btn-info">Démarrer</a>
+                                        </div>
+
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Navbar Area -->
+
+                </header>
+                <!-- End Header Area -->
+ {% block baniere %}
+                <!-- Start Main Banner Area -->
+        <div class="main-banner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12">
+                        <div class="main-banner-content">
+                            <h1>IA & Social Marketing</h1>
+                            <p>Utilisez Facebook et Messenger pour automatiser et optimiser la gestion du marketing complet de votre entreprise. </p>
+
+                            <div class="btn-box">
+                                <a href="#" class="btn btn-light">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-12">
+                        <div class="main-banner-image">
+                            <img  src="{%static 'assets/img/uSocialBot-_Home_-_hero.png'%}" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-shape"><img src="{%static 'assets/img/banner-shape.png'%}" alt="image"></div>
+            <div class="banner-white-shape"><img src="{%static 'assets/img/white-shape.png'%}" alt="image"></div>
+            <div class="shape3"><img src="{%static 'assets/img/shape/1.svg'%}" alt="image"></div>
+            <div class="shape2"><img src="{%static 'assets/img/shape/1.svg'%}" alt="image"></div>
+
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    {% endblock %}
+        <!-- End Main Banner Area -->
+{% block central %}
+        <!-- Start Featured Services Area -->
+        <section class="featured-services-area ptb-110">
+            <div class="container">
+                <div class="row">
+                    <div class="featured-services-slides owl-carousel owl-theme">
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="single-services-box">
+                                <div class="feature-icon">
+                                    <img src="{%static 'assets/img/uSocialBot-_Home-Icon_-_Boutique_Messenger.png'%}" />
+                                </div>
+
+                                <h3><a href="#">Boutique Messenger</a></h3>
+                                <p>Vendez et payez directement dans Messenger en convertissant tous vos internautes en clients potentiels. C'est la première fonctionnalité jamais introduite par un logiciel lié au marketing dans le monde entier.</p>
+                                <a href="#" class="learn-more-btn">Apprendre Plus <i class="flaticon-add-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="single-services-box">
+                                <div class="icon">
+                                    <i class="flaticon-big-data"></i>
+                                </div>
+
+                                <h3><a href="#">Auto-répondeur FB</a></h3>
+                                <p>
+                                    Programmez des réponses personnalisées sur toutes vos pages et groupes Facebook et envoyez les instantanément à vos visiteurs quand ils commentent ou interagissent avec votre publication.
+                                </p>
+                                <a href="#" class="learn-more-btn">Apprendre Plus <i class="flaticon-add-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="single-services-box">
+                                <div class="icon bg-cefffe">
+                                    <i class="flaticon-code"></i>
+                                </div>
+
+                                <h3><a href="#">Chatbot Messenger</a></h3>
+                                <p>Facilitez l'accès à tous vos contenus et services, en démarrant des conversations intelligentes avec votre cible dans messenger.
+                                    Optez pour l'assistant messenger disponible 24h/24 & 7j/7 dans votre site web.</p>
+                                <a href="#" class="learn-more-btn">Apprendre Plus <i class="flaticon-add-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="single-services-box">
+                                <div class="feature-icon">
+                                    <img src="{%static 'assets/img/uSocialBot-_Home-Icon_-_SMS_Marketing.png'%}" />
+                                </div>
+
+                                <h3><a href="#">SMS Marketing</a></h3>
+                                <p>Réalisez des campagnes SMS ciblées et garder un contact de proximité avec vos clients et prospects.
+                                    Fidélisez votre audience par ce rapport simple continu et automatique.</p>
+                                <a href="#" class="learn-more-btn">Apprendre Plus <i class="flaticon-add-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="single-services-box">
+                                <div class="feature-icon">
+                                    <img src="{%static 'assets/img/uSocialBot-_Home-Icon_-_Marketing_des_RS.png'%}" />
+                                </div>
+
+                                <h3><a href="#"> Marketing des médias sociaux</a></h3>
+                                <p>Uriel Bot peut peut publier (textes, images, vidéos) sur les pages Facebook et autres réseaux sociaux tels que Twitter, LinkedIn, Pinterest, Reddit, YouTube, Blogger et WordPress..</p>
+                                <a href="#" class="learn-more-btn">Apprendre Plus <i class="flaticon-add-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="single-services-box">
+                                <div class="feature-icon">
+                                    <img src="{%static 'assets/img/uSocialBot-_Home-Icon_-_Marketing_Analytique.png'%}" />
+                                </div>
+
+                                <h3><a href="#"> Marketing analytique</a></h3>
+                                <p>Uriel Bot peut générer un rapport analytique graphique sur l'utilisation du bot Messenger sur les pages Facebook. Ce rapport bien interprété augmentera le taux de conversion</p>
+                                <a href="#" class="learn-more-btn">Apprendre Plus <i class="flaticon-add-1"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="shape4"><img src="{%static 'assets/img/shape/1.svg'%}" alt="image"></div>
+            <div class="shape5"><img src="{%static 'assets/img/shape/1.svg'%}" alt="image"></div>
+        </section>
+        <!-- End Featured Services Area -->
+
+     <section class="features-area ptb-110 bg-f1f3f6">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Impact audience & Bénéfices entreprise</h2>
+                    <p> En 2020, Uriel Bot est le meilleur choix pour
+                        vos solutions marketing quotidiennes.</p>
+                </div>
+
+
+                <div class="overview-box">
+                    <div class="content">
+                        <h3 style="color:#337ab7;">Automatisez votre relation client . </h3>
+                        <p>Créez des Chatbots Messenger pour vos pages Facebook afin d’engager votre audience, de vendre vos biens et services et de répondre de façon automatique aux préoccupations de vos clients.</p>
+                        <ul class="features-list">
+                            <li><span><i class='bx bx-check-double'></i> Zéro compétence en programmation requise</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Soyez disponible désormais 24h/24, 7j/7 pour vos clients</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Interface graphique conviviale WYSIWYG de création de flux de discussions</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Intégrer vos boutiques e-commerce directement dans Messenger </span></li>
+                            <li><span><i class='bx bx-check-double'></i> Créez votre tunnel de ventes en 60 sécondes Chrono !</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Ajouter la bulle messenger sur votre site web</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="image">
+                        <img src="{%static 'assets/img/uSocialBot-_Home_-_Automatisez_votre_relation_client.png'%}" alt="image">
+                    </div>
+                </div>
+
+                <div class="overview-box">
+                    <div class="image">
+                        <img src="{%static 'assets/img/uSocialBot-_Home_-_Attirer_vers_vous_de_nouveaux_anonn%c3%a9s.png'%}" alt="image">
+                    </div>
+
+                    <div class="content">
+                        <h3 style="color: #ff9500 ;">Attirer vers vous de nouveaux anonnés .</h3>
+                        <p>Trouvez, analysez, augmentez et communiquez avec votre public. Uriel Bot est Un outil marketing certifié par Facebook doté de puissantes fonctions de ciblage, d'analyse, de gestion et d'engagement de l'audience. </p>
+                        <ul class="features-list">
+                            <li><span><i class='bx bx-check-double'></i> Visualisez vos statistiques journalières et mensuelles </span></li>
+                            <li><span><i class='bx bx-check-double'></i> Recherchez de bons profils, groupes et pages efficacement</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Ciblez, selon le sexe, la langue, le nombre d'abonnés</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Interagissez avec plusieurs comptes et pages Facebook</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Débarrassez vous des engagements inutiles</span></li>
+                            <li><span><i class='bx bx-check-double'></i> créez une communauté loyale pour votre compte.
+
+                            </span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="overview-box">
+                    <div class="content">
+                        <h3 style="color:#df4e68;">Démarrer des campagnes messenger marketing sur 100.000 personnes en clic</h3>
+                        <p>Vous pouvez créer des posts typés selon l'âge ou le sexe, et le transmettre en 1 clic à un nombre infini d'utilisateurs de Facebook abonnées sur votre page .</p>
+
+                        <ul class="features-list">
+                            <li><span><i class='bx bx-check-double'></i> Comment marketing</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Email marketing</span></li>
+                            <li><span><i class='bx bx-check-double'></i> SMS markting </span></li>
+                            <li><span><i class='bx bx-check-double'></i> Analytic matketing</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Search Marketing</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Comparison marketing</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="image">
+                        <img src="{%static 'assets/img/uSocialBot-_Home_-_100.000_personnes_en_1_clic.png'%}" alt="image">
+                    </div>
+                </div>
+
+                <div class="overview-box">
+                    <div class="image">
+                        <img src="{%static 'assets/img/uSocialBot-_HOme_-_R%c3%a9duisez_couts_pub.png'%}" alt="image">
+                    </div>
+
+                    <div class="content">
+                        <h3 style="color:#8e44ad;">Réduisez vos coûts publicitaires</h3>
+                        <p>Arrêtez de dépenser gros pour promouvoir votre business, un outil puissant suffit pour remplir complètement cette fonction .</p>
+
+                        <ul class="features-list">
+                            <li><span><i class='bx bx-check-double'></i> Défiez la concurrence par nos services exclusifs</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Choississez un bon outil plûtot que mille outils</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Produisez un rapport de comparaison de 2 sites</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Répondez automatiquement à vos abonnés avec un chatbot</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Commentez automatiquement des publications</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Importez toutes vos pages et comptes Facebook</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="overview-box">
+                    <div class="content">
+                        <h3 style="color:#007aff;">Convertissez 7 fois plus vite !</h3>
+                        <p>Faîtes accroitre de manière exponentielle votre taux de conversion et Convertissez plus de prospects et vendez 7x plus .</p>
+                        <ul class="features-list">
+                            <li><span><i class='bx bx-check-double'></i> Gestion du panier abandonné</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Auto-repondeur Facebook</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Gestion des notifications OTN</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Social monitoring possible</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Bulle messenger intégrée</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Marketing de proximité</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="image">
+                        <img src="{%static 'assets/img/uSocialBot-_Home_-_Convertissez_7_fois_plus_vite.png'%}" alt="image">
+                    </div>
+                </div>
+
+                <div class="overview-box">
+                    <div class="image">
+                        <img src="{%static 'assets/img/uSocialBot-_Home_-_mails_et_des_SMS_en_masse.png'%}" alt="image">
+                    </div>
+
+                    <div class="content">
+                        <h3 style="color:#4cd964;">Envoyez des mails et des SMS en masse</h3>
+                        <p>Réalisez des campagnes email et SMS ciblées et garder un contact de proximité avec vos clients et prospects.
+                            Fidélisez votre audience par ce rapport simple continu et automatique. Il est aussi possible d'importer dans le logiciel une liste de contacts pour la campagne.</p>
+
+                        <ul class="features-list">
+                            <li><span><i class='bx bx-check-double'></i> Le SMS à un taux de lecture est très élevé.</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Communiquez des soldes ou desventes Flash</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Informez d'un évènement ou d'une promotion</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Communiquez des promotions exceptionnels</span></li>
+                            <li><span><i class='bx bx-check-double'></i> 98% d'ouverture dans les 3 minutes qui suivent la reception</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Le télephone est consulté en moyenne 150 fois/jour</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="overview-box">
+
+                    <div class="content">
+                        <h3 style="color:#ff3b30;">Intégrez facilement d'autres applications .</h3>
+                        <p>Connectez vos différents chatbots hébergés chez nous, à de nombreuses applications grâce à notre API JSON sans aucune connaissance informatique </p>
+                        <ul class="features-list">
+                            <li><span><i class='bx bx-check-double'></i> Slack, Trello </span></li>
+                            <li><span><i class='bx bx-check-double'></i> Youtube, Twitter</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Wordpress, MaiChimp</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Flux RSS, Gmail</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Pinterest, LinkedIn</span></li>
+                            <li><span><i class='bx bx-check-double'></i> Jira, ...</span></li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <img src="{%static 'assets/img/uSocialBot-_Home_-_Int%c3%a9grez_facilement_d_autres_applications.png'%}" alt="image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="rectangle-shape1"><img src="{%static 'assets/img/rectangle-shape1.png'%}" alt="image"></div>
+            <div class="rectangle-shape2"><img src="{%static 'assets/img/rectangle-shape2.png'%}" alt="image"></div>
+            <div class="shape1"><img src="{%static 'assets/img/shape/1.svg'%}" alt="image"></div>
+            <div class="shape2"><img src="{%static 'assets/img/shape/1.svg'%}" alt="image"></div>
+            <div class="shape3"><img src="{%static 'assets/img/shape/1.svg'%}" alt="image"></div>
+        </section>
+
+         <!-- Start How It Works Area -->
+        <section class="how-it-works-area ptb-110">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="color:#012169 ;">La tendance la plus répandue en 2020</h2>
+                    <p>Uriel Bot vous offre la possibilité de créer des chatbots messenger pour quasiment tout type de système, Vous l'aurez compris la limite demeure l'imagination </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-cloud"></i>
+                            </div>
+                            <h3>Restaurant</h3>
+                            <p>Aujourd’hui, lorsqu’un client souhaite commander, ou connaître vos horaires, il vous contacte. S’il n’obtient pas une réponse instantanément, il risque d'aller voir ailleurs.</p>
+                            <!-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, injected humour, or randomised.</p> -->
+
+                            <div class="number-text">1</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-system"></i>
+                            </div>
+                            <h3>Immobilier</h3>
+                            <p>Un chatbot ici peut permettre de une agence immobilière à présenter des images ou vidéos des sites à louer, tout en facilitant la prise de rendez-vous!</p>
+                            <div class="number-text">2</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-analysis"></i>
+                            </div>
+                            <h3>Agence de voyage</h3>
+                            <p>Il est possible de faciliter l'accès aux informations de bases telles que, les trajets et tarifs, la gestion du courrier, il est aussi possible d'effectuer une reservation.</p>
+                            <div class="number-text">3</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class='row'>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-analysis"></i>
+                            </div>
+                            <h3>Prêt à porter </h3>
+                            <p>Mis à part vous, personne ne connais la totalité des vêtements disponibles dans votre boutique, faîtes en un meilleur inventaire et planifiez des campagnes marketing.   </p>
+                            <div class="number-text">4</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-analysis"></i>
+                            </div>
+                            <h3>Agence de télécommunication</h3>
+                            <p>Vos abonnés ne retiennent pas tous les codes et forfaits diponibles et la plus value, Allez y à eux via un bot et orientez les sur la nature du service demandé. </p>
+                            <div class="number-text">5</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-analysis"></i>
+                            </div>
+                            <h3>Ecole formation & Auto-école </h3>
+                            <p>Informez vos apprenants sur les modalités d'inscription, sur les communiqués, les annonces. Soumettez les des cours et exercices à tous, en un clic avec Uriel Bot.   </p>
+                            <div class="number-text">6</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class='row'>
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-analysis"></i>
+                            </div>
+                            <h3>Cinéma / Compétition</h3>
+                            <p>Faîtes connaitre à l'avance par un moyen plus familier les programmes de films à diffuser ou des compétitions sportives ou autres, animer les réactions de vos abonnés.</p>
+                            <div class="number-text">7</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-analysis"></i>
+                            </div>
+                            <h3>Portfolio</h3>
+                            <p>Vendez vous auprès d'une audience cible et effectuez des campagnes de posts automatiques de vos réalisations dans les réseaux sociaux.</p>
+
+                            <div class="number-text">8</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-analysis"></i>
+                            </div>
+                            <h3>Enquête & Sensibilisation </h3>
+                            <p>Dans certaines administrations, montez un dossier n'est pas toujours chose facile, vous pouvez créer un chatbot qui oriente l'internaute sur un type precis de document.</p>
+                            <div class="number-text">9</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-analysis"></i>
+                            </div>
+                            <h3>Location matériel / véhicules</h3>
+                            <p>C'est une bonne affaire de monétiser vos avoirs passifs, à condition que la plus grand nombre en soit informé et vous contacte pour cela sinon relaye pour vous l'annonce. </p>
+                            <div class="number-text">10</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-analysis"></i>
+                            </div>
+                            <h3>Brocante </h3>
+                            <p>Il est difficile d'avoir la garantie de l'écoulement d'un produit dans une brocante. A défaut de faire du rangement dans la vraie vie, faites le en digital et faîtes plus de ventes. </p>
+                            <div class="number-text">11</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
+                        <div class="single-how-it-work-box">
+                            <div class="icon">
+                                <i class="flaticon-analysis"></i>
+                            </div>
+                            <h3>Artisanat </h3>
+                            <p>Beaucoup de créations artisanales se vendent à faible échelle, et pourtant très convoités car en général fait à la main, unique et de qualité supérieure. Uriel Bot va vous expandre.</p>
+                            <div class="number-text">12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Start Why Choose Us Area -->
+        <section class="why-choose-us-area ptb-110">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="section-title">
+                            <h2>Uriel Bot, les points fort ?</h2>
+                            <p>Ce n'est plus un secret, Uriel Bot est le meilleur logiciel de marketing au monde actuellement. C'est un logiciel SaaS qui permet d'automatiser le marketing quotidien de façon pratique et quantifiable.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-choose-us-box">
+                            <div class="title">
+                                <div class="icon">
+                                    <i class='bx bx-git-merge' style="margin-top: 17px;"></i>
+                                </div>
+                                <h3>Le numéro 1</h3>
+                            </div>
+
+                            <div class="content">
+                                <h3>Le numéro 1</h3>
+                                <p>Uriel Bot est seule entreprise au monde a avoir introduit le E-commerce directement dans Messenger !</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-choose-us-box">
+                            <div class="title">
+                                <div class="icon">
+                                    <i class='bx bx-down-arrow' style="margin-top: 17px;"></i>
+                                </div>
+                                <h3>Convivial & Intuitif</h3>
+                            </div>
+
+                            <div class="content">
+                                <h3>Convivial & Intuitif</h3>
+                                <p>Le tableau de bord est parfaitement structuré / précis, ce qui facilite la découverte d'une fonctionnalité.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-choose-us-box">
+                            <div class="title">
+                                <div class="icon">
+                                    <i class='bx bx-expand' style="margin-top: 17px;"></i>
+                                </div>
+                                <h3>Mise à jour temps réel</h3>
+                            </div>
+
+                            <div class="content">
+                                <h3>Mises à jour</h3>
+                                <p>Toute l'activité dans les médias sociaux est actualisée en temps réel pour une meilleure expérience utilisateur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-choose-us-box">
+                            <div class="title">
+                                <div class="icon">
+                                    <i class='bx bx-timer' style="margin-top: 17px;"></i>
+                                </div>
+                                <h3>Tout-en-Un</h3>
+                            </div>
+
+                            <div class="content">
+                                <h3>Tout-en-Un</h3>
+                                <p>Toutes les fonctions marketing connues ou enseignées, dans un seul et même logiciel multi-utilisateur et multi-canal.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-choose-us-box">
+                            <div class="title">
+                                <div class="icon">
+                                    <i class='bx bx-trending-up' style="margin-top: 17px;"></i>
+                                </div>
+                                <h3>100% Extensible</h3>
+                            </div>
+
+                            <div class="content">
+                                <h3>100% Extensible</h3>
+                                <p>L'une des puissances de notre logiciel est l'ajout d'extensions bien documentées et suffisamment commentées </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-choose-us-box">
+                            <div class="title">
+                                <div class="icon">
+                                    <i class='bx bx-lock-alt' style="margin-top: 17px;"></i>
+                                </div>
+                                <h3>Fortement Securisé</h3>
+                            </div>
+
+                            <div class="content">
+                                <h3>Fortement Securisé</h3>
+                                <p>Nous sommes certifiés par Facebook, et utilisons les protocoles modernes. Ainsi vos données sont protégées.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </section>
+
+         <!--  Resources area -->
+        <section class="resources-area ptb-110" style="padding-bottom: 20px;">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="color:#0ea648 ;">F.A.Q & RESSOURCES</h2>
+                    <p>Depuis fin 2019, toutes les entreprises adhère au marketing digital qui consiste en une file d'activités marketing précises</p>
+                </div>
+            </div>
+
+            <div class="resources-slides owl-carousel owl-theme">
+
+                            <div class="single-resources-box">
+                   <div class="resources-content">
+                        <h3><a href="ressources/6.html">Quels modes de paiement supportez-vous  ?
+                        </a></h3>
+                        <p><div>Nous acceptons&nbsp; Paypal, Stripe, la plupart des principales cartes
+                       de crédit, dont Visa, Mastercard, American Express et et tout les payements locaux du cameroun (Orange Money, Mobile Money, etc...)</div></p>
+                        <a href="ressources/6.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+                            <div class="single-resources-box">
+                  <div class="resources-content">
+                        <h3><a href="ressources/7.html">Avez vous une politique de remboursement ?
+                        </a></h3>
+                        <p><div>Nous nous efforçons de créer la meilleure plateforme de marketing Messenger au monde. Si vous n'êtes pas satisfait par</div></p>
+                        <a href="ressources/7.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+                            <div class="single-resources-box">
+                   <div class="resources-content">
+                        <h3><a href="ressources/8.html">Quels sont les avantages de l&#039;utilisation d&#039;un chatbot Messenger ?
+                        </a></h3>
+                        <p><div>De nombreux chatbots simulent une conversation humaine via une interface</div></p>
+                        <a href="ressources/8.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+                            <div class="single-resources-box">
+                 <div class="resources-content">
+                        <h3><a href="ressources/10.html">Quelles compétences faut il pour utiliser Uriel Bot
+                        </a></h3>
+                        <p><div>Vous n'avez besoin d'aucunes connaissances particulières pour utiliser Uriel Bot, il est assez simple d'utilisation</div></p>
+                        <a href="ressources/10.html" class="learn-more-btn">Lire Plus <i class="flaticon-add-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Nos services area -->
+       <section class="resources-area ptb-110" style="padding-top: 20px; padding-bottom: 60px;padding-left: 20px;">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 style="color: #00b2ff;">NOS SERVICES</h2>
+                        <p>Les aspects du marketing que touche Uriel Bot</p>
+                    </div>
+                </div>
+                    <div class="resources-slides owl-carousel owl-theme">
+                         <div class="box box1">
+                                   <p>Utilisez Whatsapp pour automatiser et optimiser
+                                       la gestion du marketing complet
+                                       de votre entreprise grâce à Uriel-Bot.</p>
+                                   <h2>Marketing Whatsapp</h2>
+                               </div>
+                         <div class="box box2">
+                                   <p>Utilisez Facebook pour automatiser et optimiser
+                                       la gestion du marketing complet
+                                       de votre entreprise grâce à Uriel-Bot .</p>
+                                   <h2>Marketing Facebook</h2>
+                               </div>
+                         <div class="box box3">
+                                   <p>Grace a Uriel Bot faites parvenir la promotion de vos produits en touchant
+                                   un large public a l'aide de sa base de données.</p>
+                                   <h2>Marketing Instagram</h2>
+                               </div>
+                         <div class="box box4">
+                                   <p>Uriel Bot sur tweeter agis bien aussi vite que des retweets
+                                   dans la mesure il vous sera possible de toucher tous vos followers
+                                    pendant votre periode de marketing.</p>
+                                   <h2>Marketing Tweeter</h2>
+                               </div>
+                         <div class="box box5">
+                                   <p>Avec cette fonctionnalité d'Uriel Bot vous serez capable de
+                                       toucher plus facilement vos contacts sur Imo.</p>
+                                   <h2>Marketing Imo</h2>
+                               </div>
+                         <div class="box box6">
+                                   <p>Grace à Uriel Bot il vous sera facile de faire parvenir a tous vos contacts
+                                    et bien plus par le biais de la base de donnée d'Uriel Bot des messages de vos
+                                       produits.Tout cela en un seul clic.</p>
+                                   <h2>Marketing sur messagerie</h2>
+                               </div>
+                         <div class="box box7">
+                                   <p>Utilisez Télégram
+                                       pour automatiser et optimiser la gestion du marketing complet
+                                       de votre entreprise grâce à Uriel-Bot .</p>
+                                   <h2>Marketing sur telegram</h2>
+                               </div>
+                    </div>
+        </section>
+
+         <!-- newsletter -->
+
+{% endblock %}
+     <footer class="footer-area">
+                 <section class="free-trial-area" >
+				<div class="container">
+					<div class="free-trial-inner-area">
+						<div class="row align-items-center">
+							<div class="col-lg-6 col-md-12">
+								<div class="content">
+									<h3>Essayer Uriel Bot </h3>
+									<p>Abonnez-vous au service d' Uriel Bot.</p>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-md-12">
+								<div class="free-trial-form">
+									<form>
+										<input type="email" class="input-newsletter"
+										 placeholder="Entrer votre adresse email" name="EMAIL">
+                                        <button type="button" id="newsletterBTNID"
+                                        >
+                                            <span class="d-none d-xs-none d-sm-none d-lg-block">Obtenir un accès</span>
+                                            <span class="d-block d-lg-none d-xs-block  ">
+                                                <i class="fa fa-paper-plane"></i>
+                                            </span>
+                                        </button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+                 <div class="copyright-area">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <p>Copyright 2020  <a href="http://www.akamasoft.cm">Akamasoft</a></li>. Tous droits reservés.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </footer>
+            <!-- End Footer Area -->
+            <div class="go-top"><i class="fas fa-arrow-up"></i><i class="fas fa-arrow-up"></i></div>
+
+
+        <script src="{%static 'assets/js/jquery.min.js'%}"></script>
+            <!-- Popper Min JS -->
+
+
+            <script src="{%static 'assets/js/popper.min.js'%}"></script>
+            <!-- Bootstrap Min JS -->
+            <script src="{%static 'assets/js/bootstrap.min.js'%}"></script>
+            <!-- Owl Carousel Min JS -->
+            <script src="{%static 'assets/js/owl.carousel.min.js'%}"></script>
+            <!-- Parallax Min JS -->
+            <script src="{%static 'assets/js/parallax.min.js'%}"></script>
+            <!-- Magnific Popup Min JS -->
+            <script src="{%static 'assets/js/jquery.magnific-popup.min.js'%}"></script>
+            <!-- Nice Select Min JS -->
+            <script src="{%static 'assets/js/jquery.nice-select.min.js'%}"></script>
+            <!-- Mean Menu JS -->
+            <script src="{%static 'assets/js/jquery.meanmenu.js'%}"></script>
+            <!-- Progress Circle Min JS -->
+            <script src="{%static 'assets/js/progresscircle.min.js'%}"></script>
+            <!-- WOW Min JS -->
+            <script src="{%static 'assets/js/wow.min.js'%}"></script>
+            <!-- Form Validator Min JS -->
+            <script src="{%static 'assets/js/form-validator.min.js'%}"></script>
+            <!-- Contact Form Min JS -->
+            <script src="{%static 'assets/js/contact-form-script.js'%}"></script>
+            <script src="{%static 'assets/js/sweet-alert.min.js'%}"></script>
+            <!-- Main JS -->
+            <script src="{%static 'assets/js/core.js'%}"></script>
+            <script src="{%static 'assets/js/main.js'%}"></script>
+</body>
+</html>

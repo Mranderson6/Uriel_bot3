@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-app.usocialbot.com	TRUE	/	FALSE	1999999999	ci_session	o1o61n2ap0q51f7i364dena32rchd9mb
-

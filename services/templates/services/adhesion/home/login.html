@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Usocialbot | Login</title>
+  <link rel="shortcut icon" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="../assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/modules/bootstrap-social/bootstrap-social.css">
+  <link rel="stylesheet" href="../assets/modules/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../assets/modules/fontawesome/css/v4-shims.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="../assets/modules/jquery.min.js"></script>
+  <script src="../assets/modules/sweetalert/sweetalert.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <section class="section">
+      <div class="container mt-5">
+  <div class="row">
+    <div class="col-12 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3">
+      <div class="login-brand">
+        <a href="../index.html"><img src="../assets/img/logo.png" alt="Usocialbot" width="200"></a>
+      </div>
+
+      <div class="card card-primary">
+        <div class="card-header"><h4><i class="fas fa-sign-in-alt"></i> Login</h4></div>
+                <div class="card-body">
+          <form method="POST" action="" class="needs-validation" novalidate="">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" value="" class="form-control" name="username" tabindex="1" required autofocus>
+
+            </div>
+
+            <div class="form-group">
+              <div class="d-block">
+              	<label for="password" class="control-label">Password</label>
+                <div class="float-right">
+                  <a href="{%url 'oublie_pwd'%}" class="text-small">
+                    Forgot your password?                  </a>
+                </div>
+              </div>
+              <input id="password" type="password" value=""  class="form-control" name="password" tabindex="2" required>
+
+              <input type="hidden" name="csrf_token" id="csrf_token" value="5c982b52655f8ce4b1facfee1bf7d2061cb4bc581851a01d36ae66bcbc8835b0">
+
+              <!-- <div class="invalid-feedback">
+                please fill in your password
+              </div> -->
+            </div>
+
+            <!-- <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
+                <label class="custom-control-label" for="remember-me">Remember Me</label>
+              </div>
+            </div> -->
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-lg btn-block login_btn" tabindex="4">
+                <i class="fa fa-sign-in-alt"></i> Login              </button>
+            </div>
+          </form>
+          
+                    <div class="row sm-gutters">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6" style="padding-top: 15px;">
+            	             </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6" style="padding-top: 15px;">
+            	<a class="btn btn-block btn-social btn-facebook" href="https://www.facebook.com/v4.0/dialog/oauth?client_id=2359308777711703&amp;state=e6115500ea89aabeb499501cb75442e1&amp;response_type=code&amp;sdk=php-sdk-5.2.0&amp;redirect_uri=https%3A%2F%2Fapp.usocialbot.com%2Fhome%2Ffacebook_login_back&amp;scope=email%2Cpages_manage_posts%2Cpages_manage_engagement%2Cpages_manage_metadata%2Cpages_read_engagement%2Cpages_show_list%2Cpages_messaging%2Cpublic_profile%2Cread_insights"><span class="fab fa-facebook"></span> Login with Facebook</a>            </div>
+
+            <div class="col-12">
+	             <div class="text-muted text-center">
+	            	<br>Do not have an account? <a href="sign_up.html">Create one</a>
+	        	</div>
+	      	 </div>
+          </div>
+	      	
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+  </div>
+</body>
+
+
+<!-- ***** AFFILIATE_TRACKING ***** -->
+<script src='../affiliate_master/affiliate_js_code'></script> 
+ 
