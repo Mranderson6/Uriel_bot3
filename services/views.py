@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from .forms import ClientForm
 from .models import *
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMultiAlternatives
+from django.template.loader import render_to_string
 from django.conf import settings
 
 
@@ -41,13 +42,17 @@ def contact_sendMail(request):
             le_client.objet = form.cleaned_data['objet']
             le_client.message = form.cleaned_data['message']
             le_client.save()
+            html_contenu = render_to_string('services/emailHtmlContent.html', {'email': le_client.mail})
+            message = EmailMultiAlternatives("Uriel Bot", '', to=[le_client.mail, "akamabil@gmail.com"])
+            message.attach_alternative(html_contenu, "text/html")
 
             sauvegarde = True
-            send_mail(le_client.objet, le_client.message, le_client.mail, ['akamabil@gmail.com'], fail_silently=False)
+            message.send()
+
 
     else:
         form = ClientForm()
-    return render(request, 'contact.html', locals())
+    return render(request, 'services/contact.html', locals())
 
 
 def about(request):
