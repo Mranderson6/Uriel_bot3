@@ -7,3 +7,8 @@ class ClientForm(forms.ModelForm):
     class Meta:
         model = Client
         fields = ('__all__')
+
+class Client_newsletterForm(forms.ModelForm):
+    class Meta:
+        model = Client_newsletter
+        fields = ('__all__')

@@ -20,14 +20,14 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url('^$', index, name='index'),
-    url('tarif/', tarif ,name='tarif'),
+    url('tarif/', tarif, name='tarif'),
     url('contact/', contact, name='contact'),
     url('about/', about, name='about'),
-    url('^inscription/',adhesion_login, name='adhesion_login'),
-    url('^sendMail/', contact_sendMail,name='contact_sendMail'),
+    url('^inscription/', adhesion_login, name='adhesion_login'),
+    url('^sendMail/', contact_sendMail, name='contact_sendMail'),
+    url('^newsletter/', contact_newsletter, name='contact_newsletter'),
     url('^adhesion/', adhesion, name='adhesion'),
     url('^oublie/', oublie_pwd, name='oublie_pwd'),
 
-
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

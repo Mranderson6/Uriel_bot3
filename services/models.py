@@ -14,3 +14,10 @@ class Client(models.Model):
         if self.name == None:
             return "ERROR-NAME IS NULL"
         return self.name
+
+
+class Client_newsletter(models.Model):
+    mail = models.CharField(max_length=200, null=True)
+
+    def __str__(self):
+        return self.mail

@@ -775,6 +775,7 @@
          <!-- newsletter -->
 
 {% endblock %}
+    {%block footer%}
      <footer class="footer-area">
                  <section class="free-trial-area" >
 				<div class="container">
@@ -788,12 +789,13 @@
 							</div>
 
 							<div class="col-lg-6 col-md-12">
+                                 {% if sauvegarde %}<div class="alert alert-danger">Vous avez bien été bien enregistré</div>{% endif %}
 								<div class="free-trial-form">
-									<form>
-										<input type="email" class="input-newsletter"
+									<form action="{% url 'contact_newsletter' %}" method="post">
+                                          {% csrf_token %}
+										<input type="email" name="mail" class="input-newsletter"
 										 placeholder="Entrer votre adresse email" name="EMAIL">
-                                        <button type="button" id="newsletterBTNID"
-                                        >
+                                        <button type="submit" id="newsletterBTNID">
                                             <span class="d-none d-xs-none d-sm-none d-lg-block">Obtenir un accès</span>
                                             <span class="d-block d-lg-none d-xs-block  ">
                                                 <i class="fa fa-paper-plane"></i>
@@ -818,7 +820,7 @@
                     </div>
 
 
-                </footer>
+                </footer> {%endblock%}
             <!-- End Footer Area -->
             <div class="go-top"><i class="fas fa-arrow-up"></i><i class="fas fa-arrow-up"></i></div>
 

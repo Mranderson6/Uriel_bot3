@@ -14,7 +14,7 @@ import os
 from os.path import basename, join, normpath
 from os import environ
 from pathlib import Path
-import django_heroku
+#import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -147,4 +147,4 @@ EMAIL_USE_TLS = True
 SERVER_EMAIL = EMAIL_HOST_USER
 ########## END EMAIL CONFIGURATION
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())

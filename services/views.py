@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import ClientForm
+from .forms import *
 from .models import *
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import render_to_string
@@ -53,6 +53,28 @@ def contact_sendMail(request):
     else:
         form = ClientForm()
     return render(request, 'services/contact.html', locals())
+
+
+def contact_newsletter(request):
+    sauvegarde = False
+    if request.method == 'POST':
+        form = Client_newsletterForm(request.POST)
+        if form.is_valid():
+            le_client_newsletter = Client_newsletter()
+
+            le_client_newsletter.mail = form.cleaned_data['mail']
+
+
+            le_client_newsletter.save()
+
+
+            sauvegarde = True
+
+
+
+    else:
+        form = ClientForm()
+    return render(request, 'services/index.html', locals())
 
 
 def about(request):
