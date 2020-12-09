@@ -39,7 +39,7 @@
 
 
 
-        {% if sauvegarde %}<div class="alert alert-danger">Votre message a bien été envoyé, nous vous recontactons dans les plus bref delai !</div>{% endif %}
+        {% if sauvegarde %}<div class="alert alert-danger">Votre message et vos informations ont bien été envoyés, nous vous recontactons dans les plus bref delai !</div>{% endif %}
 <div class="contact-form">
          <form action="{% url 'contact_sendMail' %}" method="post">
                 {% csrf_token %}
