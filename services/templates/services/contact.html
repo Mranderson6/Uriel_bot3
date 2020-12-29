@@ -41,6 +41,7 @@
 
         {% if sauvegarde %}<div class="alert alert-danger">Votre message et vos informations ont bien été envoyés, nous vous recontactons dans les plus bref delai !</div>{% endif %}
 <div class="contact-form">
+    <! -- formulaire-->
          <form action="{% url 'contact_sendMail' %}" method="post">
                 {% csrf_token %}
                 <div class="row">
