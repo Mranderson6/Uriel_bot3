@@ -64,7 +64,7 @@ def contact_newsletter(request):
             le_client_newsletter.mail = form.cleaned_data['mail']
 
             le_client_newsletter.save()
-            html_contenu = render_to_string('services/emailHtmlnewslettert.html.html', {'email': le_client_newsletter.mail})
+            html_contenu = render_to_string('services/emailHtmlnewslettert.html', {'email': le_client_newsletter.mail})
             message = EmailMultiAlternatives("Uriel Bot", '', to=[le_client_newsletter.mail, "akamabil@gmail.com"])
             message.attach_alternative(html_contenu, "text/html")
 
